@@ -1,0 +1,37 @@
+<polymer-element name="ceci-spacer" attributes="height" extends="ceci-element" height="30">
+  <template>
+    <link rel="stylesheet" href="component.css"></link>
+    <div id="spacerDiv"></div>
+    <shadow></shadow>
+    <script type="text/json" id="ceci-definition">
+      {
+        "tags": ["starter", "layout", "navigation"],
+        "thumbnail": "./thumbnail.png",
+        "broadcasts": {},
+        "listeners": {},
+        "attributes": {
+          "height": {
+            "label": "Height",
+            "description": "The height of the spacer.",
+            "editable": "number",
+            "listener": true
+          }
+        }
+      }
+    </script>
+  </template>
+ <description>
+    A spacer to put between components.
+  </description>
+  <script>
+    Polymer('ceci-spacer', {
+      ready: function () {
+        this.super();
+        this.setAttribute("height", this.height );
+      },
+      heightChanged: function (oldValue, newValue) {
+        this.$.spacerDiv.style.height = newValue + "px";
+      }
+    });
+  </script>
+</polymer-element>
