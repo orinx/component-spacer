@@ -1,0 +1,5 @@
+{
+	"ceci-spacer": "Spacer",
+	"ceci-spacer/attributes/height/label": "Height",
+	"ceci-spacer/attributes/height/description": "The height of the spacer."
+}

@@ -1,0 +1,5 @@
+{
+    "ceci-spacer": "Espaçador",
+    "ceci-spacer/attributes/height/label": "Altura",
+    "ceci-spacer/attributes/height/description": "A altura do espaçador."
+}
