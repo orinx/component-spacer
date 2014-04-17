@@ -3,25 +3,25 @@
     <link rel="stylesheet" href="component.css"></link>
     <div id="spacerDiv"></div>
     <shadow></shadow>
-    <script type="text/json" id="ceci-definition">
-      {
-        "tags": ["starter", "layout", "navigation"],
-        "thumbnail": "./thumbnail.png",
-        "name": "Spacer",
-        "description": "A spacer to put between components.",
-        "broadcasts": {},
-        "listeners": {},
-        "attributes": {
-          "height": {
-            "label": "Height",
-            "description": "The height of the spacer.",
-            "editable": "number",
-            "listener": true
-          }
+  </template>
+  <ceci-definition>
+    {
+      "tags": ["starter", "layout", "navigation"],
+      "thumbnail": "./thumbnail.png",
+      "name": "Spacer",
+      "description": "A spacer to put between components.",
+      "broadcasts": {},
+      "listeners": {},
+      "attributes": {
+        "height": {
+          "label": "Height",
+          "description": "The height of the spacer.",
+          "editable": "number",
+          "listener": true
         }
       }
-    </script>
-  </template>
+    }
+  </ceci-definition>
   <script>
     Polymer('ceci-spacer', {
       ready: function () {
