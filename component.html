@@ -1,4 +1,4 @@
-<polymer-element name="ceci-spacer" attributes="height" extends="ceci-element" height="30">
+<polymer-element name="ceci-spacer" attributes="height color" extends="ceci-element">
   <template>
     <link rel="stylesheet" href="component.css"></link>
     <div id="spacerDiv"></div>
@@ -13,6 +13,11 @@
       "broadcasts": {},
       "listeners": {},
       "attributes": {
+        "color": {
+          "label": "Color",
+          "description": "Color of the occupied space.",
+          "editable": "color"
+        },
         "height": {
           "label": "Height",
           "description": "The height of the spacer.",
@@ -24,9 +29,14 @@
   </ceci-definition>
   <script>
     Polymer('ceci-spacer', {
+      height: 30,
+      color: '#fff',
       ready: function () {
         this.super();
-        this.setAttribute("height", this.height );
+        this.setAttribute('height', this.height);
+      },
+      colorChanged: function (oldValue, newValue) {
+        this.style.backgroundColor = this.color;
       },
       heightChanged: function (oldValue, newValue) {
         this.$.spacerDiv.style.height = newValue + "px";
