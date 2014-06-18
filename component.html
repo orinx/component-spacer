@@ -1,4 +1,4 @@
-<polymer-element name="ceci-spacer" attributes="height color" height="30" extends="ceci-element">
+<polymer-element name="ceci-spacer" attributes="height" height="30" extends="ceci-element">
   <template>
     <link rel="stylesheet" href="component.css"></link>
     <div id="spacer"></div>
@@ -28,7 +28,6 @@
         this.super();
       },
       heightChanged: function (oldValue, newValue) {
-        console.log("height changed");
         this.$.spacer.style.height = newValue + "px";
       }
     });
