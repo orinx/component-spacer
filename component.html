@@ -1,7 +1,9 @@
-<polymer-element name="ceci-spacer" attributes="height" height="30" extends="ceci-element">
+<polymer-element name="ceci-spacer" attributes="height background" extends="ceci-element"
+height="30"
+background="#FFFFFF">
   <template>
     <link rel="stylesheet" href="component.css"></link>
-    <div id="spacer"></div>
+    <div style="background: {{background}}; height: {{height}}px;" id="spacer"></div>
     <shadow></shadow>
   </template>
   <ceci-definition>
@@ -18,6 +20,11 @@
           "description": "The height of the spacer.",
           "editable": "number",
           "min" : 5
+        },
+        "background": {
+          "label": "Background Color",
+          "description": "The background color of the spacer.",
+          "editable": "color"
         }
       }
     }
@@ -26,9 +33,6 @@
     Polymer('ceci-spacer', {
       ready: function () {
         this.super();
-      },
-      heightChanged: function (oldValue, newValue) {
-        this.$.spacer.style.height = newValue + "px";
       }
     });
   </script>
