@@ -1,0 +1,6 @@
+{
+	"ceci-spacer": "留白",
+	"ceci-spacer/description": "使用留白來分隔磚塊們",
+	"ceci-spacer/attributes/height/label": "高度",
+	"ceci-spacer/attributes/height/description": "留白的高度"
+}
